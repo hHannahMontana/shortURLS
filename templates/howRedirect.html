@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Как перейти на ссылку, используя код
+{% endblock %}
+
+{% block body %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+<h1>Чтобы перейти на нужный сайт, используя код полученный раннее на <a href="{{('/')}}">главной</a>, вы должны в ссылку дописать: ?code= Ваш код. Итоговый вид ссылки: http://127.0.0.1:5000/page?code=Ваш код.</h1>
+</div>
+    {% endblock %}

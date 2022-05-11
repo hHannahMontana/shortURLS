@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Страница о нас
+{% endblock %}
+
+{% block body %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">О нас</h1>
+      <p class="fs-5 text-muted">Два маленьких мальчика в безуспешных попытках создать сайт, который сможет генерировать короткие ссылки, проверять их на безопасность и создавать QRcode для вас </p>
+    <p class="fs-5 text-muted">а пока просто котики... 😺</p>
+    <p><img src="{{ url_for( 'static' , filename= 'kitty.jpg') }}" alt="ops image" height="600" width="800"></p>
+
+</div>
+{% endblock %}

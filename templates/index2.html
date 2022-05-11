@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Short Link Generator menu
+{% endblock %}
+<div class="padding-inside "></div> <style> .padding-inside {padding:20px;} </style>
+{% block body %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+<h1 class="container mt-5">Short Link Generator menu</h1>
+    {% for cat,msg in get_flashed_messages(True) %}
+    <div class="flash {{cat}}">{{msg}}</div>
+    {% endfor %}
+    <form method="post" class="form-contact">
+        <p><label>Ваш URL, который хотите сократить: </label><textarea name="longurl" id="longurl" class="form-control" placeholder="Введите вашу ссылку"></textarea><div class="padding-inside "></div> <style> .padding-inside {padding:20px;} </style>
+        <p><label>Код сокращения для перехода на изначальный url: </label><input type="text" name="code" id="code" class="form-control" placeholder="Введите ваш код для короткой ссылки(количество символов равно 5!)"><br>
+        <input type="submit" class="btn btn-success" value="Отправить">
+    </form>
+    Ваш QR-code:
+    <p><img src="{{ url_for( 'static' , filename= 'myQR.jpg') }}" alt="ops image" height="300" width="300"></p>
+    </div>
+{% endblock %}
